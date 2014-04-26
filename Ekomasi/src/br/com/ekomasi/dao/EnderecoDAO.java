@@ -19,7 +19,11 @@ public class EnderecoDAO {
 		session.save(endereco);
 		transaction.commit();
 	}
-	
-	//criar metodo deleta, altera, etc
+
+	public void remove(Endereco endereco) {
+		Transaction transaction = session.beginTransaction();
+		session.delete(endereco);
+		transaction.commit();
+	}
 
 }

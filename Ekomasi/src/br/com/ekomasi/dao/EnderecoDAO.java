@@ -1,0 +1,25 @@
+package br.com.ekomasi.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import br.com.ekomasi.modelo.Endereco;
+import br.com.ekomasi.util.CreateSession;
+
+public class EnderecoDAO {
+	
+	private final Session session;
+	
+	public EnderecoDAO() {
+	this.session = CreateSession.getSession();
+	}
+	
+	public void salva(Endereco endereco) {
+		Transaction transaction = session.beginTransaction();
+		session.save(endereco);
+		transaction.commit();
+	}
+	
+	//criar metodo deleta, altera, etc
+
+}

@@ -1,12 +1,12 @@
 package br.com.ekomasi.modelo;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class Pessoa {
 
 	private String login;
 	private String nome;
-	private Date dataNascimento;
+	private Calendar dataNascimento;
 	private String telefone1;
 	private String telefone2;
 	private String email;
@@ -27,10 +27,10 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataNascimento() {
+	public Calendar getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getTelefone1() {

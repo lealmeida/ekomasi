@@ -14,16 +14,18 @@ public class EnderecoDAO {
 	this.session = CreateSession.getSession();
 	}
 	
-	public void salva(Endereco endereco) {
+	public void adiciona(Endereco endereco) {
 		Transaction transaction = session.beginTransaction();
 		session.save(endereco);
 		transaction.commit();
 	}
 
+	/*
 	public void remove(Endereco endereco) {
 		Transaction transaction = session.beginTransaction();
 		session.delete(endereco);
 		transaction.commit();
 	}
-
+	*/
+	
 }

@@ -10,7 +10,7 @@ public class TesteAdicionaEndereco {
 		
 		Endereco endereco = criaEndereco();
 		
-		new EnderecoDAO().salva(endereco);
+		new EnderecoDAO().adiciona(endereco);
 		
 	}
 

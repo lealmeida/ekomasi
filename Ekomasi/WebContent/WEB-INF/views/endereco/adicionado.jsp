@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hello World Spring MVC</title>
+<title>Adicionar Endereço</title>
 </head>
 <body>
-Hello World com Spring MVC
+Endereço gravado com sucesso!
 </body>
 </html>

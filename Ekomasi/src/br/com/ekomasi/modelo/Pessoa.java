@@ -2,16 +2,24 @@ package br.com.ekomasi.modelo;
 
 import java.util.Calendar;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
 public class Pessoa {
 
+	@Id
 	private String login;
 	private String nome;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataNascimento;
 	private String telefone1;
 	private String telefone2;
 	private String email;
 	private String cpf;
-	private Endereco endereco;
+	//private Endereco endereco;
 	private String senha;
 	
 	
@@ -57,12 +65,12 @@ public class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public Endereco getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
+	//public Endereco getEndereco() {
+		//return endereco;
+	//}
+	//public void setEndereco(Endereco endereco) {
+		//this.endereco = endereco;
+	//}
 	public String getSenha() {
 		return senha;
 	}

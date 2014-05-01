@@ -13,5 +13,6 @@
 		<property name="format_sql">true</property>
 		
 		<mapping class="br.com.ekomasi.modelo.Endereco"/>
+		<mapping class="br.com.ekomasi.modelo.Pessoa"/>
 	</session-factory>
 </hibernate-configuration>

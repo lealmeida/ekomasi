@@ -1,11 +1,12 @@
 package br.com.ekomasi.dao;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.springframework.expression.ParseException;
+
 
 import br.com.ekomasi.modelo.Pessoa;
 import br.com.ekomasi.util.CreateSession;
@@ -23,6 +24,13 @@ private final Session session;
 
 		session.save(pessoa);
 		transaction.commit();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Pessoa> getLista(){
+		Query query = session.createQuery("Select p from Pessoa p");
+		List<Pessoa> listaPessoa = query.list();
+		return listaPessoa;
 	}
 
 }

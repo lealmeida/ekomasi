@@ -25,5 +25,10 @@ public class PessoaController {
 		return "usuario/pessoaAdicionada";
 	}
 	
+	@RequestMapping("lista")
+	public String listar(){
+		return "usuario/listaPessoas";
+	}
+	
 
 }
